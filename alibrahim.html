@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AL IBRAHIM VISION CARE – Premium Optical</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --blue:#1d4ed8;--blue2:#2563eb;--blue3:#3b82f6;
+  --indigo:#4338ca;--violet:#6d28d9;
+  --white:#fff;--bg:#f8faff;--bg2:#eef2ff;--bg3:#e0e7ff;
+  --dark:#0f172a;--dark2:#1e293b;--mid:#334155;
+  --gray:#64748b;--gray2:#94a3b8;
+  --border:#e2e8f0;--border2:#cbd5e1;
+  --grad:linear-gradient(135deg,#1d4ed8 0%,#6d28d9 100%);
+  --grad2:linear-gradient(135deg,#2563eb 0%,#7c3aed 100%);
+  --shadow:0 4px 24px rgba(29,78,216,.10);
+  --shadow2:0 16px 48px rgba(29,78,216,.14);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#fff;color:var(--dark);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+.topbar{background:var(--grad);color:#fff;text-align:center;padding:10px 20px;font-size:.77rem;font-weight:600}
+.topbar b{background:rgba(255,255,255,.15);border-radius:4px;padding:2px 10px;margin:0 3px}
+
+nav{position:sticky;top:0;z-index:999;background:#fff;border-bottom:1px solid var(--border);padding:0 60px;transition:box-shadow .3s}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:66px}
+.nav-logo{display:flex;align-items:center;gap:11px}
+.logo-sq{width:40px;height:40px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center}
+.logo-sq svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round}
+.logo-txt strong{display:block;font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:800;color:var(--dark);letter-spacing:.2px}
+.logo-txt small{display:block;font-size:.56rem;letter-spacing:3px;color:var(--blue2);text-transform:uppercase;font-weight:700;margin-top:1px}
+.nav-links{display:flex;gap:2px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--mid);font-size:.8rem;font-weight:600;padding:7px 13px;border-radius:7px;transition:all .2s}
+.nav-links a:hover{background:var(--bg2);color:var(--blue2)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-tag{background:var(--bg3);color:var(--indigo);font-size:.63rem;font-weight:800;padding:4px 11px;border-radius:50px;letter-spacing:.8px;text-transform:uppercase}
+.nav-cta{background:var(--grad);color:#fff;border:none;padding:10px 22px;border-radius:8px;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(29,78,216,.28);transition:all .3s}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 7px 20px rgba(29,78,216,.38)}
+
+/* HERO */
+#hero{background:var(--bg);overflow:hidden}
+.hero-wrap{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:50px;padding:80px 60px 60px;max-width:1280px;margin:0 auto}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--border2);border-radius:50px;padding:6px 16px;font-size:.7rem;font-weight:700;color:var(--indigo);margin-bottom:22px;letter-spacing:.5px}
+.blink{width:8px;height:8px;border-radius:50%;background:var(--blue2);animation:bl 1.6s infinite}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:.2}}
+.hero h1{font-family:'Poppins',sans-serif;font-size:clamp(2.1rem,3.8vw,3.4rem);font-weight:800;line-height:1.12;margin-bottom:18px;letter-spacing:-.5px}
+.hero h1 span{background:var(--grad2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-p{font-size:.97rem;color:var(--gray);line-height:1.82;max-width:470px;margin-bottom:34px}
+.hero-btns{display:flex;gap:11px;flex-wrap:wrap;margin-bottom:40px}
+.btn-fill{background:var(--grad);color:#fff;padding:13px 30px;border:none;border-radius:8px;font-family:'Poppins',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;box-shadow:0 5px 18px rgba(29,78,216,.3);transition:all .3s;text-decoration:none;display:inline-block}
+.btn-fill:hover{transform:translateY(-2px);box-shadow:0 9px 26px rgba(29,78,216,.4)}
+.btn-out{background:#fff;color:var(--blue2);padding:13px 30px;border:1.5px solid var(--border2);border-radius:8px;font-family:'Poppins',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block}
+.btn-out:hover{border-color:var(--blue2);background:var(--bg2)}
+.hero-trust{display:flex;gap:20px;flex-wrap:wrap;padding-top:28px;border-top:1px solid var(--border)}
+.t-it{display:flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;color:var(--mid)}
+.t-dot{width:7px;height:7px;border-radius:50%;background:var(--grad)}
+.hero-vis{display:flex;justify-content:center;align-items:center;position:relative}
+.hero-card{background:var(--grad);border-radius:22px;padding:30px;position:relative;overflow:hidden;box-shadow:0 28px 70px rgba(29,78,216,.32);width:100%;max-width:340px}
+.hero-card::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.07)}
+.hero-card::after{content:'';position:absolute;bottom:-40px;left:-30px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.05)}
+.hero-card-svg{width:100%;border-radius:12px;display:block;margin-bottom:18px;position:relative;z-index:1}
+.hero-card-h{font-family:'Poppins',sans-serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:6px;position:relative;z-index:1}
+.hero-card-s{font-size:.8rem;color:rgba(255,255,255,.83);margin-bottom:16px;line-height:1.55;position:relative;z-index:1}
+.hero-card-btn{background:#fff;color:var(--blue2);border:none;padding:9px 20px;border-radius:7px;font-family:'Poppins',sans-serif;font-size:.75rem;font-weight:700;cursor:pointer;position:relative;z-index:1}
+.fp{position:absolute;background:#fff;border-radius:12px;box-shadow:0 8px 28px rgba(0,0,0,.10);padding:11px 15px;display:flex;align-items:center;gap:10px;z-index:5}
+.fp.a{top:-14px;right:-14px}
+.fp.b{bottom:30px;left:-22px}
+.fp-ic{width:32px;height:32px;border-radius:8px;background:var(--bg2);display:flex;align-items:center;justify-content:center}
+.fp-ic svg{width:16px;height:16px;stroke:var(--blue2);fill:none;stroke-width:2;stroke-linecap:round}
+.fp strong{display:block;font-size:.79rem;font-weight:700;color:var(--dark)}
+.fp small{font-size:.65rem;color:var(--gray)}
+
+/* SEC BASE */
+section{padding:80px 60px}
+.sec-lbl{display:inline-flex;align-items:center;gap:7px;background:var(--bg2);border-radius:6px;padding:4px 12px;font-size:.65rem;font-weight:800;color:var(--indigo);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:12px}
+.sec-h{font-family:'Poppins',sans-serif;font-size:clamp(1.5rem,2.5vw,2.2rem);font-weight:800;color:var(--dark);line-height:1.2;letter-spacing:-.3px}
+.sec-h span{background:var(--grad2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sec-sub{font-size:.9rem;color:var(--gray);line-height:1.75;max-width:500px}
+.sec-row{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:40px}
+
+/* CATEGORIES */
+#categories{background:#fff;padding:64px 60px}
+.cat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.cat-card{background:var(--bg);border-radius:16px;overflow:hidden;cursor:pointer;transition:all .3s;border:1.5px solid transparent}
+.cat-card:hover{border-color:var(--blue3);background:#fff;box-shadow:var(--shadow);transform:translateY(-4px)}
+.cat-img-wrap{width:100%;height:130px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.cat-img-wrap svg{width:100%;height:100%}
+.cat-info{padding:13px 12px}
+.cat-info h4{font-size:.82rem;font-weight:700;color:var(--dark);margin-bottom:2px}
+.cat-info p{font-size:.67rem;color:var(--gray)}
+
+/* BRANCHES */
+#branches{background:var(--bg)}
+.b-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:44px}
+.bc{background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1.5px solid var(--border);transition:all .3s}
+.bc:hover{transform:translateY(-5px);box-shadow:var(--shadow2)}
+.bc-hd{padding:30px 32px 26px;position:relative;overflow:hidden}
+.bc.main .bc-hd{background:var(--grad)}
+.bc.unit .bc-hd{background:linear-gradient(135deg,#0ea5e9,#2563eb)}
+.bc-hd::after{content:'';position:absolute;top:-50px;right:-50px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.08)}
+.bc-chip{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);border-radius:5px;padding:3px 10px;font-size:.6rem;font-weight:800;color:#fff;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:13px;position:relative;z-index:1}
+.bc-hd h3{font-family:'Poppins',sans-serif;font-size:1.2rem;font-weight:800;color:#fff;margin-bottom:4px;position:relative;z-index:1}
+.bc-hd p{font-size:.72rem;color:rgba(255,255,255,.78);font-weight:600;position:relative;z-index:1}
+.bc-body{padding:22px 32px}
+.bc-desc{font-size:.86rem;color:var(--gray);line-height:1.75;margin-bottom:18px}
+.bc-rows{display:flex;flex-direction:column;gap:9px}
+.bc-row{display:flex;align-items:center;gap:10px;font-size:.82rem;color:var(--dark2);font-weight:600}
+.bc-row-ic{width:28px;height:28px;border-radius:7px;background:var(--bg2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.bc-row-ic svg{width:13px;height:13px;stroke:var(--blue2);fill:none;stroke-width:2;stroke-linecap:round}
+.bc-ft{padding:16px 32px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.bc-tag{font-size:.64rem;font-weight:800;color:var(--blue2);background:var(--bg2);padding:4px 10px;border-radius:5px}
+.bc-btn{background:var(--grad);color:#fff;border:none;padding:9px 19px;border-radius:7px;font-family:'Poppins',sans-serif;font-size:.73rem;font-weight:700;cursor:pointer;transition:all .3s}
+.bc-btn:hover{transform:translateY(-1px);box-shadow:0 5px 15px rgba(29,78,216,.3)}
+.bc-note{text-align:center;margin-top:18px}
+.bc-note span{display:inline-block;background:#fff;border:1.5px solid var(--border2);border-radius:50px;padding:8px 20px;font-size:.73rem;font-weight:700;color:var(--indigo)}
+
+/* SERVICES */
+#services{background:#fff}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.svc{background:var(--bg);border-radius:16px;padding:30px 24px;border:1.5px solid transparent;transition:all .3s;position:relative;overflow:hidden}
+.svc:hover{border-color:var(--blue3);background:#fff;box-shadow:var(--shadow);transform:translateY(-3px)}
+.svc::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.svc:hover::after{transform:scaleX(1)}
+.svc-ic{width:50px;height:50px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.svc-ic svg{width:22px;height:22px;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.svc:nth-child(1) .svc-ic{background:#ede9fe}.svc:nth-child(1) .svc-ic svg{stroke:#6d28d9}
+.svc:nth-child(2) .svc-ic{background:#dbeafe}.svc:nth-child(2) .svc-ic svg{stroke:#1d4ed8}
+.svc:nth-child(3) .svc-ic{background:#dcfce7}.svc:nth-child(3) .svc-ic svg{stroke:#16a34a}
+.svc:nth-child(4) .svc-ic{background:#fef3c7}.svc:nth-child(4) .svc-ic svg{stroke:#d97706}
+.svc:nth-child(5) .svc-ic{background:#fce7f3}.svc:nth-child(5) .svc-ic svg{stroke:#be185d}
+.svc:nth-child(6) .svc-ic{background:#e0f2fe}.svc:nth-child(6) .svc-ic svg{stroke:#0284c7}
+.svc h3{font-size:.98rem;font-weight:700;margin-bottom:8px;color:var(--dark);font-family:'Poppins',sans-serif}
+.svc p{font-size:.82rem;color:var(--gray);line-height:1.73}
+.svc-pill{display:inline-block;margin-top:14px;font-size:.63rem;font-weight:700;color:var(--blue2);background:var(--bg2);padding:3px 10px;border-radius:5px}
+
+/* ABOUT */
+#about{background:var(--bg);display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-vis{position:relative}
+.about-main-svg-wrap{border-radius:20px;overflow:hidden;box-shadow:var(--shadow2)}
+.about-float{position:absolute;bottom:-16px;right:-16px;background:#fff;border-radius:14px;box-shadow:0 10px 34px rgba(0,0,0,.10);padding:16px 18px}
+.af-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.af-stat{text-align:center}
+.af-stat strong{display:block;font-family:'Poppins',sans-serif;font-size:1.4rem;font-weight:800;background:var(--grad2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.af-stat small{font-size:.6rem;color:var(--gray);font-weight:700;text-transform:uppercase;letter-spacing:1px}
+.about-features{display:flex;flex-direction:column;gap:12px;margin-top:28px}
+.af{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:12px;background:#fff;border:1px solid var(--border);transition:all .3s}
+.af:hover{border-color:var(--border2);box-shadow:0 4px 14px rgba(29,78,216,.07)}
+.af-ic{width:36px;height:36px;border-radius:10px;background:var(--bg2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.af-ic svg{width:16px;height:16px;stroke:var(--blue2);fill:none;stroke-width:2;stroke-linecap:round}
+.af h4{font-size:.86rem;font-weight:700;margin-bottom:2px;color:var(--dark)}
+.af p{font-size:.76rem;color:var(--gray);line-height:1.55}
+
+/* DOCTORS */
+#doctors{background:#fff}
+.doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:860px;margin:44px auto 0}
+.doc{background:var(--bg);border-radius:20px;overflow:hidden;border:1.5px solid var(--border);transition:all .4s}
+.doc:hover{border-color:var(--blue3);box-shadow:var(--shadow2);transform:translateY(-5px);background:#fff}
+.doc-top{background:var(--grad);padding:26px;display:flex;align-items:center;gap:14px;position:relative;overflow:hidden}
+.doc-top::after{content:'';position:absolute;bottom:-35px;right:-35px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.07)}
+.doc-av{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.18);border:2.5px solid rgba(255,255,255,.45);display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:1;overflow:hidden}
+.doc-av svg{width:32px;height:32px;stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round}
+.doc-meta h3{font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:3px;position:relative;z-index:1}
+.doc-role{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.78);font-weight:700;position:relative;z-index:1}
+.doc-body{padding:20px 24px}
+.doc-body p{font-size:.83rem;color:var(--gray);line-height:1.73;margin-bottom:16px}
+.doc-tags{display:flex;flex-wrap:wrap;gap:7px}
+.doc-tags span{font-size:.63rem;font-weight:700;color:var(--blue2);background:var(--bg2);padding:4px 10px;border-radius:5px}
+
+/* EYEWEAR GRID */
+#eyewear{background:var(--bg)}
+.ew-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.ew-card{background:#fff;border-radius:16px;overflow:hidden;border:1.5px solid var(--border);transition:all .3s;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.ew-card:hover{border-color:var(--blue3);transform:translateY(-4px);box-shadow:var(--shadow2)}
+.ew-img-wrap{width:100%;height:160px;display:flex;align-items:center;justify-content:center;background:var(--bg);overflow:hidden}
+.ew-img-wrap svg{width:100%;height:100%}
+.ew-info{padding:14px}
+.ew-info h4{font-size:.88rem;font-weight:700;color:var(--dark);margin-bottom:3px;font-family:'Poppins',sans-serif}
+.ew-info p{font-size:.73rem;color:var(--gray);margin-bottom:11px}
+.ew-bot{display:flex;align-items:center;justify-content:space-between}
+.ew-tag{font-size:.62rem;font-weight:700;color:var(--blue2);background:var(--bg2);padding:3px 9px;border-radius:5px}
+.ew-arr{width:26px;height:26px;border-radius:7px;background:var(--bg2);display:flex;align-items:center;justify-content:center;transition:all .3s}
+.ew-arr svg{width:11px;height:11px;stroke:var(--blue2);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.ew-card:hover .ew-arr{background:var(--blue2)}
+.ew-card:hover .ew-arr svg{stroke:#fff}
+
+/* OFFER */
+#offer{background:var(--grad);text-align:center;position:relative;overflow:hidden}
+#offer::before{content:'';position:absolute;top:-80px;left:-80px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.06)}
+#offer::after{content:'';position:absolute;bottom:-60px;right:-60px;width:230px;height:230px;border-radius:50%;background:rgba(255,255,255,.05)}
+.offer-in{position:relative;z-index:1}
+.offer-chip{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);border-radius:6px;padding:4px 14px;font-size:.66rem;font-weight:800;color:#fff;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:16px}
+#offer h2{font-family:'Poppins',sans-serif;font-size:clamp(1.6rem,3vw,2.6rem);font-weight:800;color:#fff;margin-bottom:10px;letter-spacing:-.3px}
+#offer p{font-size:.94rem;color:rgba(255,255,255,.85);max-width:460px;margin:0 auto 28px;line-height:1.73}
+.offer-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.ob1{background:#fff;color:var(--blue2);border:none;padding:13px 28px;border-radius:8px;font-family:'Poppins',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;transition:all .3s}
+.ob1:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.13)}
+.ob2{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45);padding:13px 28px;border-radius:8px;font-family:'Poppins',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;transition:all .3s}
+.ob2:hover{background:rgba(255,255,255,.1);border-color:#fff}
+
+/* CONTACT */
+#contact{background:#fff;display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:start}
+.c-cards{display:flex;flex-direction:column;gap:11px;margin-top:26px}
+.c-card{display:flex;align-items:flex-start;gap:12px;background:var(--bg);border-radius:11px;padding:13px 15px;border:1px solid var(--border);transition:border-color .3s}
+.c-card:hover{border-color:var(--border2)}
+.c-ic{width:36px;height:36px;border-radius:9px;background:var(--bg2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.c-ic svg{width:15px;height:15px;stroke:var(--blue2);fill:none;stroke-width:2;stroke-linecap:round}
+.c-card h4{font-size:.67rem;letter-spacing:1.8px;text-transform:uppercase;color:var(--blue2);margin-bottom:2px;font-weight:800}
+.c-card p{font-size:.83rem;color:var(--dark2);font-weight:600;line-height:1.45}
+.cf-wrap{background:var(--bg);border-radius:20px;padding:32px;border:1.5px solid var(--border)}
+.cf-wrap h3{font-family:'Poppins',sans-serif;font-size:1.25rem;font-weight:800;margin-bottom:3px;color:var(--dark)}
+.cf-sub{font-size:.8rem;color:var(--gray);margin-bottom:20px}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.cf-g{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.cf-g label{font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray);font-weight:800}
+.cf-g input,.cf-g select,.cf-g textarea{background:#fff;border:1.5px solid var(--border);color:var(--dark);padding:11px 12px;border-radius:9px;font-family:'Inter',sans-serif;font-size:.85rem;outline:none;transition:border-color .3s}
+.cf-g input:focus,.cf-g select:focus,.cf-g textarea:focus{border-color:var(--blue2)}
+.cf-g textarea{resize:vertical;min-height:84px}
+.cf-submit{background:var(--grad);color:#fff;border:none;padding:14px;border-radius:9px;font-family:'Poppins',sans-serif;font-size:.83rem;font-weight:700;cursor:pointer;width:100%;box-shadow:0 5px 16px rgba(29,78,216,.23);transition:all .3s}
+.cf-submit:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(29,78,216,.35)}
+
+/* FOOTER */
+footer{background:var(--dark);padding:56px 60px;color:#fff}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:38px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:26px}
+.ft-lb{display:flex;align-items:center;gap:10px;margin-bottom:13px}
+.ft-sq{width:36px;height:36px;border-radius:9px;background:var(--grad);display:flex;align-items:center;justify-content:center}
+.ft-sq svg{width:19px;height:19px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round}
+.ft-brand strong{font-family:'Poppins',sans-serif;font-size:.87rem;font-weight:800;color:#fff}
+.ft-brand small{display:block;font-size:.55rem;letter-spacing:2.5px;color:var(--blue3);text-transform:uppercase;font-weight:700}
+.ft-about{font-size:.8rem;color:var(--gray2);line-height:1.73;max-width:220px;margin-bottom:14px}
+.ft-badges{display:flex;gap:7px;flex-wrap:wrap}
+.ft-badge{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:3px 10px;font-size:.62rem;font-weight:700;color:var(--gray2)}
+.ft-col h5{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray2);margin-bottom:13px;font-weight:800}
+.ft-col a{display:block;font-size:.8rem;color:rgba(255,255,255,.62);text-decoration:none;margin-bottom:8px;transition:color .3s}
+.ft-col a:hover{color:#fff}
+.ft-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.ft-bottom p{font-size:.75rem;color:var(--gray2)}
+.ft-bottom .hi{color:var(--blue3)}
+
+.fade-up{opacity:0;transform:translateY(22px);transition:opacity .62s ease,transform .62s ease}
+.fade-up.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.34s}
+
+@media(max-width:960px){
+  nav{padding:0 18px}
+  .nav-links{display:none}
+  .hero-wrap{grid-template-columns:1fr;padding:80px 22px 40px}
+  .hero-vis{display:none}
+  section,#branches,#about,#contact{padding:60px 22px}
+  #about,#contact{grid-template-columns:1fr;gap:36px}
+  .about-vis{display:none}
+  .b-grid,.doc-grid,.svc-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:repeat(3,1fr)}
+  .ew-grid{grid-template-columns:1fr 1fr}
+  .cf-row{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr 1fr}
+  footer{padding:40px 22px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">Two locations — <b>AL Ibrahim Vision Care</b> &amp; <b>Jaitpur Eye Centre</b> — Expert Eye Care &amp; Premium Eyewear</div>
+
+<nav>
+  <div class="nav-in">
+    <div class="nav-logo">
+      <div class="logo-sq"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/></svg></div>
+      <div class="logo-txt"><strong>AL IBRAHIM VISION CARE</strong><small>Premium Optical</small></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#branches">Branches</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#eyewear">Eyewear</a></li>
+      <li><a href="#doctors">Doctors</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="nav-tag">2 Branches</span>
+      <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Appointment</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-wrap">
+    <div class="fade-up">
+      <div class="hero-pill"><div class="blink"></div>Premium Vision Care — 2 Branches</div>
+      <h1>Your Eyes Deserve<br>The <span>Best Care</span><br>&amp; Finest Frames</h1>
+      <p class="hero-p">Expert eye checkups, premium spectacles, contact lenses and more — at AL Ibrahim Vision Care and Jaitpur Eye Centre, your trusted vision care partners.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-fill">Book Eye Checkup</a>
+        <a href="#branches" class="btn-out">Our Branches</a>
+      </div>
+      <div class="hero-trust">
+        <div class="t-it"><div class="t-dot"></div>Expert Optometrists</div>
+        <div class="t-it"><div class="t-dot"></div>500+ Frames</div>
+        <div class="t-it"><div class="t-dot"></div>2 Branches</div>
+        <div class="t-it"><div class="t-dot"></div>Same Day Service</div>
+      </div>
+    </div>
+    <div class="hero-vis fade-up d2">
+      <div style="position:relative;width:100%;max-width:340px">
+        <div class="fp a">
+          <div class="fp-ic"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div><strong>Top Rated</strong><small>Vision Care</small></div>
+        </div>
+        <div class="hero-card">
+          <!-- SVG illustration of premium eyeglasses -->
+          <svg class="hero-card-svg" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="160" fill="#1e3a5f" rx="12"/>
+            <!-- shelf shadow -->
+            <ellipse cx="150" cy="148" rx="110" ry="8" fill="rgba(0,0,0,0.25)"/>
+            <!-- Left lens frame -->
+            <rect x="30" y="45" width="90" height="65" rx="28" fill="none" stroke="url(#goldgrad)" stroke-width="5"/>
+            <rect x="36" y="51" width="78" height="53" rx="22" fill="rgba(147,197,253,0.18)"/>
+            <!-- Right lens frame -->
+            <rect x="180" y="45" width="90" height="65" rx="28" fill="none" stroke="url(#goldgrad)" stroke-width="5"/>
+            <rect x="186" y="51" width="78" height="53" rx="22" fill="rgba(147,197,253,0.18)"/>
+            <!-- Bridge -->
+            <path d="M120 72 Q150 60 180 72" fill="none" stroke="url(#goldgrad)" stroke-width="4.5" stroke-linecap="round"/>
+            <!-- Left arm -->
+            <line x1="30" y1="72" x2="4" y2="80" stroke="url(#goldgrad)" stroke-width="4" stroke-linecap="round"/>
+            <!-- Right arm -->
+            <line x1="270" y1="72" x2="296" y2="80" stroke="url(#goldgrad)" stroke-width="4" stroke-linecap="round"/>
+            <!-- Lens shine left -->
+            <path d="M48 60 Q58 55 65 62" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Lens shine right -->
+            <path d="M198 60 Q208 55 215 62" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Label text -->
+            <text x="150" y="135" text-anchor="middle" font-family="Poppins,sans-serif" font-size="11" fill="rgba(255,255,255,0.6)" font-weight="600" letter-spacing="2">PREMIUM COLLECTION</text>
+            <defs>
+              <linearGradient id="goldgrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f5d07a"/>
+                <stop offset="100%" stop-color="#e8a020"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="hero-card-h">Premium Eyeglasses</div>
+          <div class="hero-card-s">Expert eye checkups + 500+ frames. Find your perfect pair today.</div>
+          <button class="hero-card-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Now</button>
+        </div>
+        <div class="fp b">
+          <div class="fp-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/></svg></div>
+          <div><strong>500+ Frames</strong><small>In Stock</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section id="categories" style="padding:64px 60px">
+  <div class="sec-row fade-up">
+    <div><div class="sec-lbl">Shop By Category</div><h2 class="sec-h">Explore Our <span>Eyewear Range</span></h2></div>
+    <p class="sec-sub" style="max-width:280px">Available at both branches.</p>
+  </div>
+  <div class="cat-grid">
+
+    <!-- Spectacles -->
+    <div class="cat-card fade-up d1">
+      <div class="cat-img-wrap">
+        <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="130" fill="#dbeafe"/>
+          <ellipse cx="100" cy="120" rx="70" ry="5" fill="rgba(29,78,216,0.1)"/>
+          <rect x="18" y="35" width="68" height="52" rx="22" fill="none" stroke="#1d4ed8" stroke-width="4"/>
+          <rect x="23" y="40" width="58" height="42" rx="17" fill="rgba(147,197,253,0.35)"/>
+          <rect x="114" y="35" width="68" height="52" rx="22" fill="none" stroke="#1d4ed8" stroke-width="4"/>
+          <rect x="119" y="40" width="58" height="42" rx="17" fill="rgba(147,197,253,0.35)"/>
+          <path d="M86 58 Q100 48 114 58" fill="none" stroke="#1d4ed8" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="18" y1="58" x2="2" y2="65" stroke="#1d4ed8" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="182" y1="58" x2="198" y2="65" stroke="#1d4ed8" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M30 48 Q40 44 46 50" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M126 48 Q136 44 142 50" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="cat-info"><h4>Spectacles</h4><p>500+ styles</p></div>
+    </div>
+
+    <!-- Sunglasses -->
+    <div class="cat-card fade-up d2">
+      <div class="cat-img-wrap">
+        <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="130" fill="#fef3c7"/>
+          <ellipse cx="100" cy="120" rx="70" ry="5" fill="rgba(180,130,0,0.12)"/>
+          <!-- wayfarer shape left -->
+          <path d="M15 42 Q15 28 36 28 L76 28 Q90 28 90 42 L90 68 Q90 82 76 82 L36 82 Q15 82 15 68 Z" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+          <path d="M22 42 Q22 35 36 35 L76 35 Q83 35 83 42 L83 68 Q83 75 76 75 L36 75 Q22 75 22 68 Z" fill="#2a2a40" opacity="0.85"/>
+          <!-- wayfarer shape right -->
+          <path d="M110 42 Q110 28 124 28 L164 28 Q185 28 185 42 L185 68 Q185 82 164 82 L124 82 Q110 82 110 68 Z" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+          <path d="M117 42 Q117 35 124 35 L164 35 Q178 35 178 42 L178 68 Q178 75 164 75 L124 75 Q117 75 117 68 Z" fill="#2a2a40" opacity="0.85"/>
+          <!-- bridge -->
+          <path d="M90 52 Q100 46 110 52" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+          <!-- arms -->
+          <line x1="15" y1="52" x2="2" y2="58" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+          <line x1="185" y1="52" x2="198" y2="58" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+          <!-- lens shine -->
+          <path d="M28 40 Q38 36 44 42" stroke="rgba(255,255,255,0.25)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M122 40 Q132 36 138 42" stroke="rgba(255,255,255,0.25)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="cat-info"><h4>Sunglasses</h4><p>UV400 protection</p></div>
+    </div>
+
+    <!-- Contact Lenses -->
+    <div class="cat-card fade-up d3">
+      <div class="cat-img-wrap">
+        <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="130" fill="#dcfce7"/>
+          <!-- contact lens case -->
+          <rect x="40" y="38" width="120" height="70" rx="35" fill="#fff" stroke="#16a34a" stroke-width="2.5"/>
+          <rect x="44" y="42" width="112" height="62" rx="31" fill="#f0fdf4"/>
+          <!-- left lens compartment -->
+          <circle cx="78" cy="73" r="22" fill="none" stroke="#16a34a" stroke-width="2"/>
+          <circle cx="78" cy="73" r="16" fill="rgba(34,197,94,0.15)" stroke="#86efac" stroke-width="1.5"/>
+          <circle cx="78" cy="73" r="9" fill="rgba(34,197,94,0.25)"/>
+          <!-- right lens compartment -->
+          <circle cx="122" cy="73" r="22" fill="none" stroke="#16a34a" stroke-width="2"/>
+          <circle cx="122" cy="73" r="16" fill="rgba(34,197,94,0.15)" stroke="#86efac" stroke-width="1.5"/>
+          <circle cx="122" cy="73" r="9" fill="rgba(34,197,94,0.25)"/>
+          <!-- L R labels -->
+          <text x="78" y="77" text-anchor="middle" font-family="Poppins,sans-serif" font-size="10" fill="#16a34a" font-weight="700">L</text>
+          <text x="122" y="77" text-anchor="middle" font-family="Poppins,sans-serif" font-size="10" fill="#16a34a" font-weight="700">R</text>
+          <!-- center divider -->
+          <line x1="100" y1="50" x2="100" y2="96" stroke="#bbf7d0" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="cat-info"><h4>Contact Lenses</h4><p>All brands</p></div>
+    </div>
+
+    <!-- Kids Eyewear -->
+    <div class="cat-card fade-up d1">
+      <div class="cat-img-wrap">
+        <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="130" fill="#fce7f3"/>
+          <!-- kid face simplified -->
+          <circle cx="100" cy="58" r="36" fill="#fed7aa" stroke="#f97316" stroke-width="1.5"/>
+          <!-- hair -->
+          <path d="M65 50 Q68 26 100 24 Q132 26 135 50" fill="#854d0e"/>
+          <!-- ears -->
+          <ellipse cx="64" cy="58" rx="7" ry="9" fill="#fed7aa" stroke="#f97316" stroke-width="1"/>
+          <ellipse cx="136" cy="58" rx="7" ry="9" fill="#fed7aa" stroke="#f97316" stroke-width="1"/>
+          <!-- glasses on face -->
+          <rect x="71" y="50" width="24" height="18" rx="8" fill="none" stroke="#be185d" stroke-width="2.5"/>
+          <rect x="74" y="53" width="18" height="12" rx="5" fill="rgba(244,114,182,0.2)"/>
+          <rect x="105" y="50" width="24" height="18" rx="8" fill="none" stroke="#be185d" stroke-width="2.5"/>
+          <rect x="108" y="53" width="18" height="12" rx="5" fill="rgba(244,114,182,0.2)"/>
+          <path d="M95 58 Q100 55 105 58" fill="none" stroke="#be185d" stroke-width="2" stroke-linecap="round"/>
+          <line x1="71" y1="58" x2="65" y2="60" stroke="#be185d" stroke-width="2" stroke-linecap="round"/>
+          <line x1="129" y1="58" x2="135" y2="60" stroke="#be185d" stroke-width="2" stroke-linecap="round"/>
+          <!-- smile -->
+          <path d="M88 74 Q100 83 112 74" fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round"/>
+          <!-- eyes -->
+          <circle cx="83" cy="57" r="3" fill="#7c2d12"/>
+          <circle cx="117" cy="57" r="3" fill="#7c2d12"/>
+          <!-- cheeks -->
+          <ellipse cx="78" cy="69" rx="8" ry="5" fill="rgba(251,146,60,0.3)"/>
+          <ellipse cx="122" cy="69" rx="8" ry="5" fill="rgba(251,146,60,0.3)"/>
+          <!-- shirt top -->
+          <path d="M66 92 Q100 88 134 92 L134 130 L66 130 Z" fill="#f9a8d4"/>
+        </svg>
+      </div>
+      <div class="cat-info"><h4>Kids Eyewear</h4><p>Safe &amp; fun</p></div>
+    </div>
+
+    <!-- Power Lenses -->
+    <div class="cat-card fade-up d2">
+      <div class="cat-img-wrap">
+        <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="130" fill="#ede9fe"/>
+          <!-- lens circle large -->
+          <circle cx="100" cy="65" r="45" fill="none" stroke="#6d28d9" stroke-width="3"/>
+          <!-- concentric rings simulating progressive lens -->
+          <circle cx="100" cy="65" r="38" fill="none" stroke="rgba(109,40,217,0.3)" stroke-width="1.5"/>
+          <circle cx="100" cy="65" r="30" fill="none" stroke="rgba(109,40,217,0.25)" stroke-width="1.5"/>
+          <circle cx="100" cy="65" r="22" fill="none" stroke="rgba(109,40,217,0.2)" stroke-width="1.5"/>
+          <circle cx="100" cy="65" r="13" fill="none" stroke="rgba(109,40,217,0.3)" stroke-width="1.5"/>
+          <!-- lens fill gradient simulation -->
+          <circle cx="100" cy="65" r="44" fill="url(#lensgrad)"/>
+          <!-- cross hairs -->
+          <line x1="100" y1="22" x2="100" y2="108" stroke="rgba(109,40,217,0.15)" stroke-width="1" stroke-dasharray="3,3"/>
+          <line x1="57" y1="65" x2="143" y2="65" stroke="rgba(109,40,217,0.15)" stroke-width="1" stroke-dasharray="3,3"/>
+          <!-- shine -->
+          <path d="M76 40 Q86 34 94 42" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <defs>
+            <radialGradient id="lensgrad" cx="40%" cy="35%">
+              <stop offset="0%" stop-color="rgba(196,181,253,0.35)"/>
+              <stop offset="100%" stop-color="rgba(109,40,217,0.05)"/>
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="cat-info"><h4>Power Lenses</h4><p>Precision crafted</p></div>
+    </div>
+
+    <!-- Eye Checkup -->
+    <div class="cat-card fade-up d3">
+      <div class="cat-img-wrap">
+        <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="130" fill="#e0f2fe"/>
+          <!-- chart board -->
+          <rect x="55" y="20" width="90" height="85" rx="6" fill="#fff" stroke="#0284c7" stroke-width="2"/>
+          <rect x="60" y="25" width="80" height="75" rx="4" fill="#f0f9ff"/>
+          <!-- eye chart letters -->
+          <text x="100" y="40" text-anchor="middle" font-family="Poppins,sans-serif" font-size="16" fill="#0f172a" font-weight="800">E</text>
+          <text x="92" y="54" text-anchor="middle" font-family="Poppins,sans-serif" font-size="11" fill="#1e293b" font-weight="700">F P</text>
+          <text x="100" y="66" text-anchor="middle" font-family="Poppins,sans-serif" font-size="8" fill="#334155" font-weight="600">T O Z</text>
+          <text x="100" y="76" text-anchor="middle" font-family="Poppins,sans-serif" font-size="6.5" fill="#475569" font-weight="600">L P E D</text>
+          <text x="100" y="85" text-anchor="middle" font-family="Poppins,sans-serif" font-size="5.5" fill="#64748b" font-weight="500">P E C F D</text>
+          <text x="100" y="93" text-anchor="middle" font-family="Poppins,sans-serif" font-size="4.5" fill="#94a3b8">E D F C Z P</text>
+          <!-- pointer stick -->
+          <line x1="100" y1="108" x2="95" y2="48" stroke="#0284c7" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="100" cy="108" r="4" fill="#0284c7"/>
+        </svg>
+      </div>
+      <div class="cat-info"><h4>Eye Checkup</h4><p>Expert testing</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BRANCHES -->
+<section id="branches">
+  <div class="fade-up" style="text-align:center">
+    <div class="sec-lbl" style="display:inline-flex;margin-bottom:12px">Our Locations</div>
+    <h2 class="sec-h">Two Branches, <span>One Vision</span></h2>
+    <p class="sec-sub" style="margin:10px auto 0;text-align:center">Two dedicated optical centres committed to expert eye care and premium eyewear.</p>
+  </div>
+  <div class="b-grid">
+    <div class="bc main fade-up d1">
+      <div class="bc-hd">
+        <div class="bc-chip">Main Branch</div>
+        <h3>AL IBRAHIM VISION CARE</h3>
+        <p>Flagship Optical Centre</p>
+      </div>
+      <div class="bc-body">
+        <p class="bc-desc">Our flagship location — full eye examinations, 500+ frames, contact lenses, and all major optical services. Where our legacy began and continues to grow.</p>
+        <div class="bc-rows">
+          <div class="bc-row"><div class="bc-row-ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>Main Area, Your City</div>
+          <div class="bc-row"><div class="bc-row-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>Mon–Sat 9 AM–9 PM | Sun 10 AM–6 PM</div>
+          <div class="bc-row"><div class="bc-row-ic"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.28-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>+91 XXXXX XXXXX</div>
+          <div class="bc-row"><div class="bc-row-ic"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>Dr. Raees Kalimullah &amp; Md. Alamgir</div>
+        </div>
+      </div>
+      <div class="bc-ft"><span class="bc-tag">All Services Available</span><button class="bc-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Here</button></div>
+    </div>
+    <div class="bc unit fade-up d2">
+      <div class="bc-hd">
+        <div class="bc-chip">Unit of AL Ibrahim</div>
+        <h3>JAITPUR EYE CENTRE</h3>
+        <p>A Unit of AL Ibrahim Vision Care</p>
+      </div>
+      <div class="bc-body">
+        <p class="bc-desc">Our second branch — an official unit of AL Ibrahim Vision Care, bringing the same quality of expert optometry and premium eyewear to the Jaitpur community.</p>
+        <div class="bc-rows">
+          <div class="bc-row"><div class="bc-row-ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>Jaitpur Area, Your City</div>
+          <div class="bc-row"><div class="bc-row-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>Mon–Sat 9 AM–9 PM | Sun 10 AM–6 PM</div>
+          <div class="bc-row"><div class="bc-row-ic"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.28-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>+91 XXXXX XXXXX</div>
+          <div class="bc-row"><div class="bc-row-ic"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>Unit of AL Ibrahim Vision Care</div>
+        </div>
+      </div>
+      <div class="bc-ft"><span class="bc-tag">All Services Available</span><button class="bc-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Here</button></div>
+    </div>
+  </div>
+  <div class="bc-note fade-up d3"><span>Jaitpur Eye Centre is an official unit of AL Ibrahim Vision Care</span></div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="sec-row fade-up">
+    <div><div class="sec-lbl">What We Offer</div><h2 class="sec-h">Complete <span>Vision Care</span> Services</h2></div>
+    <p class="sec-sub" style="max-width:300px">Everything your eyes need — at both our branches.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc fade-up d1"><div class="svc-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><circle cx="11" cy="11" r="3"/></svg></div><h3>Eye Examination</h3><p>Comprehensive checkups using advanced diagnostic tools. Full vision assessment and eye health screening.</p><span class="svc-pill">Comprehensive Testing</span></div>
+    <div class="svc fade-up d2"><div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Spectacles &amp; Frames</h3><p>Wide collection of stylish, durable frames for all ages — classic designs to trendy contemporary styles.</p><span class="svc-pill">500+ Styles</span></div>
+    <div class="svc fade-up d3"><div class="svc-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><h3>Prescription Lenses</h3><p>Single vision, bifocal, and progressive lenses crafted precisely to your prescription for perfect clarity.</p><span class="svc-pill">Custom Crafted</span></div>
+    <div class="svc fade-up d1"><div class="svc-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></div><h3>Contact Lenses</h3><p>Daily, monthly, and extended wear from all trusted brands. We find the perfect fit and comfort for you.</p><span class="svc-pill">All Major Brands</span></div>
+    <div class="svc fade-up d2"><div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 2.69-9 6v1c0 3.31 4.03 6 9 6s9-2.69 9-6V9c0-3.31-4.03-6-9-6z"/><path d="M3 10c0 3.31 4.03 6 9 6s9-2.69 9-6"/></svg></div><h3>Sunglasses</h3><p>UV-protected prescription and fashion sunglasses — combining style with essential eye protection.</p><span class="svc-pill">UV400 Protection</span></div>
+    <div class="svc fade-up d3"><div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div><h3>Frame Repairs</h3><p>Quick and reliable eyewear repairs and adjustments. We ensure your glasses fit comfortably.</p><span class="svc-pill">Same Day Service</span></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-vis fade-up">
+    <div class="about-main-svg-wrap">
+      <!-- SVG illustration: optometrist examining patient -->
+      <svg viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%">
+        <rect width="500" height="380" fill="#1e3a8a"/>
+        <!-- background glow -->
+        <ellipse cx="250" cy="190" rx="200" ry="160" fill="rgba(59,130,246,0.12)"/>
+        <!-- Eye chart on wall -->
+        <rect x="170" y="30" width="160" height="130" rx="6" fill="#fff" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+        <rect x="176" y="36" width="148" height="118" rx="4" fill="#f8faff"/>
+        <text x="250" y="62" text-anchor="middle" font-family="Poppins,sans-serif" font-size="28" fill="#0f172a" font-weight="800">E</text>
+        <text x="242" y="82" text-anchor="middle" font-family="Poppins,sans-serif" font-size="18" fill="#1e293b" font-weight="700">F P</text>
+        <text x="250" y="98" text-anchor="middle" font-family="Poppins,sans-serif" font-size="13" fill="#334155" font-weight="600">T O Z</text>
+        <text x="250" y="112" text-anchor="middle" font-family="Poppins,sans-serif" font-size="10" fill="#475569">L P E D</text>
+        <text x="250" y="124" text-anchor="middle" font-family="Poppins,sans-serif" font-size="8" fill="#64748b">P E C F D</text>
+        <text x="250" y="135" text-anchor="middle" font-family="Poppins,sans-serif" font-size="6.5" fill="#94a3b8">E D F C Z P</text>
+        <!-- table -->
+        <rect x="60" y="240" width="380" height="16" rx="4" fill="#1e40af"/>
+        <rect x="100" y="256" width="16" height="80" rx="3" fill="#1e40af"/>
+        <rect x="384" y="256" width="16" height="80" rx="3" fill="#1e40af"/>
+        <!-- Doctor figure (left) -->
+        <circle cx="145" cy="175" r="26" fill="#fed7aa"/>
+        <path d="M120 170 Q122 148 145 148 Q168 148 170 170" fill="#1d4ed8"/>
+        <rect x="118" y="200" width="54" height="70" rx="8" fill="#1d4ed8"/>
+        <line x1="118" y1="215" x2="95" y2="245" stroke="#1d4ed8" stroke-width="14" stroke-linecap="round"/>
+        <line x1="172" y1="215" x2="210" y2="240" stroke="#1d4ed8" stroke-width="14" stroke-linecap="round"/>
+        <!-- stethoscope hint -->
+        <path d="M130 210 Q125 225 130 230 Q135 235 140 230" fill="none" stroke="#bfdbfe" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Patient figure (right) -->
+        <circle cx="355" cy="185" r="24" fill="#fcd5b4"/>
+        <path d="M332 180 Q334 160 355 160 Q376 160 378 180" fill="#7c3aed"/>
+        <rect x="330" y="208" width="50" height="65" rx="7" fill="#7c3aed"/>
+        <!-- glasses on patient -->
+        <rect x="339" y="180" width="15" height="11" rx="5" fill="none" stroke="#fff" stroke-width="2"/>
+        <rect x="357" y="180" width="15" height="11" rx="5" fill="none" stroke="#fff" stroke-width="2"/>
+        <path d="M354 185 Q355.5 183 357 185" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- slit lamp instrument between them -->
+        <rect x="212" y="195" width="70" height="55" rx="6" fill="#1e3a6e" stroke="#3b82f6" stroke-width="1.5"/>
+        <circle cx="247" cy="205" r="10" fill="#3b82f6" stroke="#bfdbfe" stroke-width="1"/>
+        <circle cx="247" cy="205" r="5" fill="#1d4ed8"/>
+        <line x1="247" y1="215" x2="247" y2="250" stroke="#3b82f6" stroke-width="3"/>
+        <ellipse cx="247" cy="250" rx="20" ry="5" fill="#1e40af"/>
+        <!-- light beam from instrument -->
+        <polygon points="257,205 310,188 310,222" fill="rgba(147,197,253,0.12)"/>
+        <!-- floor -->
+        <rect x="0" y="316" width="500" height="64" fill="#0f2057"/>
+        <!-- text labels -->
+        <text x="250" y="348" text-anchor="middle" font-family="Poppins,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)" font-weight="600" letter-spacing="3">PROFESSIONAL EYE EXAMINATION</text>
+      </svg>
+    </div>
+    <div class="about-float">
+      <div class="af-stats">
+        <div class="af-stat"><strong>2</strong><small>Branches</small></div>
+        <div class="af-stat"><strong>500+</strong><small>Frames</small></div>
+        <div class="af-stat"><strong>2</strong><small>Doctors</small></div>
+        <div class="af-stat"><strong>10+</strong><small>Years</small></div>
+      </div>
+    </div>
+  </div>
+  <div class="fade-up d2">
+    <div class="sec-lbl">About Us</div>
+    <h2 class="sec-h">Your Trusted <span>Vision Partner</span></h2>
+    <p class="sec-sub">AL Ibrahim Vision Care is a premium optical establishment with two branches — our main centre and Jaitpur Eye Centre. Expert optometry combined with an extensive eyewear collection, delivering the best care to every patient.</p>
+    <div class="about-features">
+      <div class="af"><div class="af-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div><div><h4>Precision Eye Testing</h4><p>Accurate prescriptions using modern diagnostic tools at both branches.</p></div></div>
+      <div class="af"><div class="af-ic"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div><div><h4>Premium Eyewear Collection</h4><p>Hundreds of frames from trusted brands for every style and budget.</p></div></div>
+      <div class="af"><div class="af-ic"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><div><h4>Two Convenient Locations</h4><p>AL Ibrahim Vision Care &amp; Jaitpur Eye Centre serving the community.</p></div></div>
+      <div class="af"><div class="af-ic"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><div><h4>Expert Optometrists</h4><p>Dr. Raees Kalimullah and Md. Alamgir — qualified, experienced professionals.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORS -->
+<section id="doctors">
+  <div class="fade-up" style="text-align:center">
+    <div class="sec-lbl" style="display:inline-flex;margin-bottom:12px">Our Experts</div>
+    <h2 class="sec-h">Meet Our <span>Optometrists</span></h2>
+    <p class="sec-sub" style="margin:10px auto 0;text-align:center">Qualified professionals dedicated to your eye health at both branches.</p>
+  </div>
+  <div class="doc-grid">
+    <div class="doc fade-up d1">
+      <div class="doc-top">
+        <div class="doc-av"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div class="doc-meta"><h3>Dr. Raees Kalimullah</h3><div class="doc-role">Chief Optometrist</div></div>
+      </div>
+      <div class="doc-body"><p>Highly experienced in comprehensive eye examinations, contact lens fitting, and refractive error management. Dedicated to the best visual outcomes for every patient.</p><div class="doc-tags"><span>Eye Checkup</span><span>Refraction</span><span>Contact Lens</span><span>Eye Health</span></div></div>
+    </div>
+    <div class="doc fade-up d2">
+      <div class="doc-top">
+        <div class="doc-av"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div class="doc-meta"><h3>Md. Alamgir</h3><div class="doc-role">Optometrist</div></div>
+      </div>
+      <div class="doc-body"><p>Specializes in vision therapy and eyewear prescription. Committed to precise diagnoses and helping every patient achieve clear, comfortable vision.</p><div class="doc-tags"><span>Vision Therapy</span><span>Pediatric Care</span><span>Spectacles</span><span>Lenses</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EYEWEAR -->
+<section id="eyewear">
+  <div class="sec-row fade-up">
+    <div><div class="sec-lbl">Our Collection</div><h2 class="sec-h">Premium <span>Eyewear</span> Range</h2></div>
+    <p class="sec-sub" style="max-width:300px">Available at both our branches.</p>
+  </div>
+  <div class="ew-grid">
+
+    <!-- 1 Designer Frames -->
+    <div class="ew-card fade-up d1">
+      <div class="ew-img-wrap">
+        <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
+          <rect width="240" height="160" fill="#f1f5f9"/>
+          <ellipse cx="120" cy="152" rx="80" ry="6" fill="rgba(0,0,0,0.07)"/>
+          <rect x="22" y="48" width="82" height="58" rx="24" fill="none" stroke="#0f172a" stroke-width="4.5"/>
+          <rect x="27" y="53" width="72" height="48" rx="19" fill="rgba(186,230,253,0.4)"/>
+          <rect x="136" y="48" width="82" height="58" rx="24" fill="none" stroke="#0f172a" stroke-width="4.5"/>
+          <rect x="141" y="53" width="72" height="48" rx="19" fill="rgba(186,230,253,0.4)"/>
+          <path d="M104 72 Q120 62 136 72" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+          <line x1="22" y1="72" x2="4" y2="80" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+          <line x1="218" y1="72" x2="236" y2="80" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+          <path d="M34 60 Q44 55 50 62" stroke="rgba(255,255,255,0.8)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M149 60 Q159 55 165 62" stroke="rgba(255,255,255,0.8)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <text x="120" y="140" text-anchor="middle" font-family="Poppins,sans-serif" font-size="9" fill="#94a3b8" font-weight="600" letter-spacing="1.5">CLASSIC FRAME</text>
+        </svg>
+      </div>
+      <div class="ew-info"><h4>Designer Frames</h4><p>Premium spectacles for all</p><div class="ew-bot"><span class="ew-tag">Trending</span><span class="ew-arr"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></div></div>
+    </div>
+
+    <!-- 2 Sunglasses -->
+    <div class="ew-card fade-up d2">
+      <div class="ew-img-wrap">
+        <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
+          <rect width="240" height="160" fill="#fefce8"/>
+          <ellipse cx="120" cy="152" rx="80" ry="6" fill="rgba(0,0,0,0.07)"/>
+          <!-- wayfarer left -->
+          <path d="M14 45 Q14 30 32 30 L88 30 Q104 30 104 45 L104 75 Q104 90 88 90 L32 90 Q14 90 14 75 Z" fill="#18181b" stroke="#404040" stroke-width="1"/>
+          <path d="M20 47 Q20 37 32 37 L88 37 Q97 37 97 47 L97 73 Q97 83 88 83 L32 83 Q20 83 20 73 Z" fill="#27272a" opacity="0.9"/>
+          <!-- wayfarer right -->
+          <path d="M136 45 Q136 30 152 30 L208 30 Q226 30 226 45 L226 75 Q226 90 208 90 L152 90 Q136 90 136 75 Z" fill="#18181b" stroke="#404040" stroke-width="1"/>
+          <path d="M143 47 Q143 37 152 37 L208 37 Q220 37 220 47 L220 73 Q220 83 208 83 L152 83 Q143 83 143 73 Z" fill="#27272a" opacity="0.9"/>
+          <!-- bridge -->
+          <path d="M104 58 Q120 50 136 58" fill="none" stroke="#18181b" stroke-width="5" stroke-linecap="round"/>
+          <!-- arms -->
+          <line x1="14" y1="58" x2="2" y2="65" stroke="#18181b" stroke-width="5" stroke-linecap="round"/>
+          <line x1="226" y1="58" x2="238" y2="65" stroke="#18181b" stroke-width="5" stroke-linecap="round"/>
+          <!-- lens sheen -->
+          <path d="M26 42 Q38 36 46 44" stroke="rgba(255,255,255,0.2)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M148 42 Q160 36 168 44" stroke="rgba(255,255,255,0.2)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <text x="120" y="140" text-anchor="middle" font-family="Poppins,sans-serif" font-size="9" fill="#94a3b8" font-weight="600" letter-spacing="1.5">WAYFARER STYLE</text>
+        </svg>
+      </div>
+      <div class="ew-info"><h4>Sunglasses</h4><p>UV400 stylish protection</p><div class="ew-bot"><span class="ew-tag">Popular</span><span class="ew-arr"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></div></div>
+    </div>
+
+    <!-- 3 Contact Lenses -->
+    <div class="ew-card fade-up d3">
+      <div class="ew-img-wrap">
+        <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
+          <rect width="240" height="160" fill="#f0fdf4"/>
+          <!-- lens case -->
+          <rect x="40" y="30" width="160" height="90" rx="45" fill="#fff" stroke="#16a34a" stroke-width="2.5"/>
+          <rect x="46" y="36" width="148" height="78" rx="39" fill="#f7fef8"/>
+          <!-- left compartment -->
+          <circle cx="88" cy="75" r="28" fill="none" stroke="#16a34a" stroke-width="2"/>
+          <circle cx="88" cy="75" r="21" fill="rgba(34,197,94,0.12)" stroke="#86efac" stroke-width="1.5"/>
+          <circle cx="88" cy="75" r="12" fill="rgba(34,197,94,0.22)"/>
+          <circle cx="88" cy="75" r="5" fill="rgba(34,197,94,0.4)"/>
+          <!-- right compartment -->
+          <circle cx="152" cy="75" r="28" fill="none" stroke="#16a34a" stroke-width="2"/>
+          <circle cx="152" cy="75" r="21" fill="rgba(34,197,94,0.12)" stroke="#86efac" stroke-width="1.5"/>
+          <circle cx="152" cy="75" r="12" fill="rgba(34,197,94,0.22)"/>
+          <circle cx="152" cy="75" r="5" fill="rgba(34,197,94,0.4)"/>
+          <text x="88" y="79" text-anchor="middle" font-family="Poppins,sans-serif" font-size="11" fill="#15803d" font-weight="800">L</text>
+          <text x="152" y="79" text-anchor="middle" font-family="Poppins,sans-serif" font-size="11" fill="#15803d" font-weight="800">R</text>
+          <line x1="120" y1="42" x2="120" y2="108" stroke="#bbf7d0" stroke-width="1.5"/>
+          <text x="120" y="148" text-anchor="middle" font-family="Poppins,sans-serif" font-size="9" fill="#94a3b8" font-weight="600" letter-spacing="1.5">CONTACT LENS CASE</text>
+        </svg>
+      </div>
+      <div class="ew-info"><h4>Contact Lenses</h4><p>Daily, monthly &amp; coloured</p><div class="ew-bot"><span class="ew-tag">All Brands</span><span class="ew-arr"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></div></div>
+    </div>
+
+    <!-- 4 Kids Eyewear -->
+    <div class="ew-card fade-up d4">
+      <div class="ew-img-wrap">
+        <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
+          <rect width="240" height="160" fill="#fef3f2"/>
+          <ellipse cx="120" cy="152" rx="80" ry="6" fill="rgba(0,0,0,0.06)"/>
+          <!-- Round colorful kids frames -->
+          <circle cx="78" cy="74" r="34" fill="none" stroke="#ef4444" stroke-width="5"/>
+          <circle cx="78" cy="74" r="29" fill="rgba(254,202,202,0.35)"/>
+          <circle cx="162" cy="74" r="34" fill="none" stroke="#ef4444" stroke-width="5"/>
+          <circle cx="162" cy="74" r="29" fill="rgba(254,202,202,0.35)"/>
+          <!-- bridge -->
+          <path d="M112 68 Q120 62 128 68" fill="none" stroke="#ef4444" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- arms -->
+          <line x1="44" y1="68" x2="14" y2="72" stroke="#ef4444" stroke-width="4.5" stroke-linecap="round"/>
+          <line x1="196" y1="68" x2="226" y2="72" stroke="#ef4444" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- star decorations on frame -->
+          <text x="62" y="58" font-family="sans-serif" font-size="10" fill="#fbbf24">★</text>
+          <text x="146" y="58" font-family="sans-serif" font-size="10" fill="#fbbf24">★</text>
+          <!-- shine -->
+          <path d="M56 62 Q65 57 72 63" stroke="rgba(255,255,255,0.75)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M140 62 Q149 57 156 63" stroke="rgba(255,255,255,0.75)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <text x="120" y="140" text-anchor="middle" font-family="Poppins,sans-serif" font-size="9" fill="#94a3b8" font-weight="600" letter-spacing="1.5">KIDS COLLECTION</text>
+        </svg>
+      </div>
+      <div class="ew-info"><h4>Kids Eyewear</h4><p>Safe &amp; durable for children</p><div class="ew-bot"><span class="ew-tag">Kids Range</span><span class="ew-arr"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></div></div>
+    </div>
+
+    <!-- 5 Anti-Glare -->
+    <div class="ew-card fade-up d1">
+      <div class="ew-img-wrap">
+        <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
+          <rect width="240" height="160" fill="#f5f3ff"/>
+          <ellipse cx="120" cy="152" rx="80" ry="6" fill="rgba(0,0,0,0.07)"/>
+          <!-- rimless frames -->
+          <rect x="22" y="50" width="82" height="56" rx="20" fill="none" stroke="#7c3aed" stroke-width="3.5" stroke-dasharray="0"/>
+          <rect x="27" y="55" width="72" height="46" rx="15" fill="rgba(196,181,253,0.3)"/>
+          <rect x="136" y="50" width="82" height="56" rx="20" fill="none" stroke="#7c3aed" stroke-width="3.5"/>
+          <rect x="141" y="55" width="72" height="46" rx="15" fill="rgba(196,181,253,0.3)"/>
+          <path d="M104 72 Q120 64 136 72" fill="none" stroke="#7c3aed" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="22" y1="72" x2="4" y2="78" stroke="#7c3aed" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="218" y1="72" x2="236" y2="78" stroke="#7c3aed" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- anti-glare coating rays -->
+          <line x1="63" y1="35" x2="63" y2="46" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/>
+          <line x1="55" y1="37" x2="60" y2="47" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/>
+          <line x1="71" y1="37" x2="66" y2="47" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/>
+          <line x1="177" y1="35" x2="177" y2="46" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/>
+          <line x1="169" y1="37" x2="174" y2="47" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/>
+          <line x1="185" y1="37" x2="180" y2="47" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/>
+          <path d="M34 62 Q44 57 50 63" stroke="rgba(255,255,255,0.8)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <text x="120" y="140" text-anchor="middle" font-family="Poppins,sans-serif" font-size="9" fill="#94a3b8" font-weight="600" letter-spacing="1.5">ANTI-GLARE COATING</text>
+        </svg>
+      </div>
+      <div class="ew-info"><h4>Anti-Glare Lenses</h4><p>Screen &amp; digital protection</p><div class="ew-bot"><span class="ew-tag">Recommended</span><span class="ew-arr"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></div></div>
+    </div>
+
+    <!-- 6 Progressive -->
+    <div class="ew-card fade-up d2">
+      <div class="ew-img-wrap">
+        <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
+          <rect width="240" height="160" fill="#f0f9ff"/>
+          <ellipse cx="120" cy="152" rx="80" ry="6" fill="rgba(0,0,0,0.07)"/>
+          <!-- Half-rim frames (progressive/bifocal style) -->
+          <path d="M22 55 Q22 45 40 44 L100 44 Q118 44 118 55 L118 78 Q118 90 100 90 L40 90 Q22 90 22 78 Z" fill="none" stroke="#0284c7" stroke-width="4"/>
+          <!-- bottom half visible only line -->
+          <line x1="22" y1="67" x2="118" y2="67" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <rect x="27" y="48" width="86" height="39" rx="10" fill="rgba(186,230,253,0.35)"/>
+          <path d="M122 55 Q122 45 140 44 L200 44 Q218 44 218 55 L218 78 Q218 90 200 90 L140 90 Q122 90 122 78 Z" fill="none" stroke="#0284c7" stroke-width="4"/>
+          <line x1="122" y1="67" x2="218" y2="67" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <rect x="127" y="48" width="86" height="39" rx="10" fill="rgba(186,230,253,0.35)"/>
+          <path d="M118 64 Q120 58 122 64" fill="none" stroke="#0284c7" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="22" y1="64" x2="4" y2="70" stroke="#0284c7" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="218" y1="64" x2="236" y2="70" stroke="#0284c7" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- D/N zone labels -->
+          <text x="70" y="58" text-anchor="middle" font-family="Poppins,sans-serif" font-size="8" fill="#0284c7" font-weight="700">DISTANCE</text>
+          <text x="70" y="83" text-anchor="middle" font-family="Poppins,sans-serif" font-size="8" fill="#0ea5e9" font-weight="700">NEAR</text>
+          <text x="170" y="58" text-anchor="middle" font-family="Poppins,sans-serif" font-size="8" fill="#0284c7" font-weight="700">DISTANCE</text>
+          <text x="170" y="83" text-anchor="middle" font-family="Poppins,sans-serif" font-size="8" fill="#0ea5e9" font-weight="700">NEAR</text>
+          <text x="120" y="140" text-anchor="middle" font-family="Poppins,sans-serif" font-size="9" fill="#94a3b8" font-weight="600" letter-spacing="1.5">PROGRESSIVE LENS</text>
+        </svg>
+      </div>
+      <div class="ew-info"><h4>Progressive Lenses</h4><p>Bifocal &amp; varifocal options</p><div class="ew-bot"><span class="ew-tag">Premium</span><span class="ew-arr"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></div></div>
+    </div>
+
+    <!-- 7 Photochromic -->
+    <div class="ew-card fade-up d3">
+      <div class="ew-img-wrap">
+        <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
+          <rect width="240" height="160" fill="#fff7ed"/>
+          <ellipse cx="120" cy="152" rx="80" ry="6" fill="rgba(0,0,0,0.07)"/>
+          <!-- aviator style frames -->
+          <path d="M22 48 Q22 36 44 36 L94 36 Q106 36 106 48 L106 80 Q106 96 88 96 L40 96 Q22 96 22 80 Z" fill="none" stroke="#c2410c" stroke-width="4"/>
+          <path d="M27 50 Q27 41 44 41 L94 41 Q101 41 101 50 L101 78 Q101 91 88 91 L40 91 Q27 91 27 78 Z" fill="rgba(253,186,116,0.35)"/>
+          <path d="M134 48 Q134 36 146 36 L196 36 Q218 36 218 48 L218 80 Q218 96 200 96 L152 96 Q134 96 134 80 Z" fill="none" stroke="#c2410c" stroke-width="4"/>
+          <path d="M139 50 Q139 41 146 41 L196 41 Q213 41 213 50 L213 78 Q213 91 200 91 L152 91 Q139 91 139 78 Z" fill="rgba(253,186,116,0.35)"/>
+          <path d="M106 62 Q120 54 134 62" fill="none" stroke="#c2410c" stroke-width="4" stroke-linecap="round"/>
+          <line x1="22" y1="62" x2="4" y2="68" stroke="#c2410c" stroke-width="4" stroke-linecap="round"/>
+          <line x1="218" y1="62" x2="236" y2="68" stroke="#c2410c" stroke-width="4" stroke-linecap="round"/>
+          <!-- sun icon -->
+          <circle cx="64" cy="64" r="10" fill="rgba(251,146,60,0.4)"/>
+          <circle cx="64" cy="64" r="6" fill="rgba(251,146,60,0.6)"/>
+          <circle cx="176" cy="64" r="10" fill="rgba(251,146,60,0.4)"/>
+          <circle cx="176" cy="64" r="6" fill="rgba(251,146,60,0.6)"/>
+          <path d="M38 50 Q46 45 52 51" stroke="rgba(255,255,255,0.7)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <text x="120" y="140" text-anchor="middle" font-family="Poppins,sans-serif" font-size="9" fill="#94a3b8" font-weight="600" letter-spacing="1.5">PHOTOCHROMIC</text>
+        </svg>
+      </div>
+      <div class="ew-info"><h4>Photochromic Lenses</h4><p>Adaptive transition lenses</p><div class="ew-bot"><span class="ew-tag">Smart</span><span class="ew-arr"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></div></div>
+    </div>
+
+    <!-- 8 Exam -->
+    <div class="ew-card fade-up d4">
+      <div class="ew-img-wrap">
+        <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
+          <rect width="240" height="160" fill="#f0fdf4"/>
+          <!-- eye chart mini -->
+          <rect x="76" y="18" width="88" height="108" rx="5" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+          <rect x="80" y="22" width="80" height="100" rx="3" fill="#f8fffe"/>
+          <text x="120" y="42" text-anchor="middle" font-family="Poppins,sans-serif" font-size="22" fill="#0f172a" font-weight="800">E</text>
+          <text x="113" y="58" text-anchor="middle" font-family="Poppins,sans-serif" font-size="14" fill="#1e293b" font-weight="700">F P</text>
+          <text x="120" y="72" text-anchor="middle" font-family="Poppins,sans-serif" font-size="10" fill="#334155" font-weight="600">T O Z</text>
+          <text x="120" y="84" text-anchor="middle" font-family="Poppins,sans-serif" font-size="8" fill="#475569">L P E D</text>
+          <text x="120" y="94" text-anchor="middle" font-family="Poppins,sans-serif" font-size="6.5" fill="#64748b">P E C F D</text>
+          <text x="120" y="103" text-anchor="middle" font-family="Poppins,sans-serif" font-size="5.5" fill="#94a3b8">E D F C Z P</text>
+          <!-- pointer -->
+          <line x1="120" y1="115" x2="116" y2="56" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="120" cy="115" r="4" fill="#16a34a"/>
+          <text x="120" y="148" text-anchor="middle" font-family="Poppins,sans-serif" font-size="9" fill="#94a3b8" font-weight="600" letter-spacing="1.5">EYE EXAMINATION</text>
+        </svg>
+      </div>
+      <div class="ew-info"><h4>Eye Examination</h4><p>Expert professional testing</p><div class="ew-bot"><span class="ew-tag">Free Checkup</span><span class="ew-arr"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- OFFER BANNER -->
+<section id="offer">
+  <div class="offer-in fade-up">
+    <div class="offer-chip">Special Offer</div>
+    <h2>Free Eye Checkup With Any<br>Eyewear Purchase!</h2>
+    <p>Visit AL Ibrahim Vision Care or Jaitpur Eye Centre and enjoy a complimentary eye examination with every frame or lens purchase.</p>
+    <div class="offer-btns">
+      <button class="ob1" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Appointment</button>
+      <button class="ob2" onclick="document.getElementById('branches').scrollIntoView({behavior:'smooth'})">Find Our Branches</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="fade-up">
+    <div class="sec-lbl">Get In Touch</div>
+    <h2 class="sec-h">Visit Us at <span>Either Branch</span></h2>
+    <p class="sec-sub">Our expert team is ready to help you see better at either location.</p>
+    <div class="c-cards">
+      <div class="c-card"><div class="c-ic"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><div><h4>Main Branch</h4><p>AL Ibrahim Vision Care — Your Area, City</p></div></div>
+      <div class="c-card"><div class="c-ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Jaitpur Eye Centre</h4><p>Unit of AL Ibrahim — Jaitpur Area, City</p></div></div>
+      <div class="c-card"><div class="c-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><h4>Working Hours</h4><p>Mon–Sat: 9 AM – 9 PM &nbsp;|&nbsp; Sun: 10 AM – 6 PM</p></div></div>
+      <div class="c-card"><div class="c-ic"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div><div><h4>Phone</h4><p>Main: +91 XXXXX XXXXX &nbsp;|&nbsp; Jaitpur: +91 XXXXX XXXXX</p></div></div>
+    </div>
+  </div>
+  <div class="cf-wrap fade-up d2">
+    <h3>Book an Appointment</h3>
+    <p class="cf-sub">Fill in the form — we'll confirm your slot shortly.</p>
+    <div class="cf-row">
+      <div class="cf-g" style="margin:0"><label>Full Name</label><input type="text" placeholder="Your full name"/></div>
+      <div class="cf-g" style="margin:0"><label>Phone</label><input type="tel" placeholder="+91 XXXXX XXXXX"/></div>
+    </div>
+    <div class="cf-g"><label>Email</label><input type="email" placeholder="your@email.com"/></div>
+    <div class="cf-g"><label>Preferred Branch</label><select><option value="">Select branch</option><option>AL Ibrahim Vision Care (Main)</option><option>Jaitpur Eye Centre</option></select></div>
+    <div class="cf-g"><label>Service Required</label><select><option value="">Select service</option><option>Eye Examination</option><option>Spectacle Frames</option><option>Prescription Lenses</option><option>Contact Lenses</option><option>Sunglasses</option><option>Frame Repair</option></select></div>
+    <div class="cf-g"><label>Preferred Doctor</label><select><option value="">No preference</option><option>Dr. Raees Kalimullah</option><option>Md. Alamgir</option></select></div>
+    <div class="cf-g"><label>Message</label><textarea placeholder="Any specific concerns or questions..."></textarea></div>
+    <button class="cf-submit" onclick="alert('Thank you! We will contact you shortly to confirm your appointment.')">Confirm My Appointment</button>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-grid">
+    <div>
+      <div class="ft-lb"><div class="ft-sq"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/></svg></div><div class="ft-brand"><strong>AL IBRAHIM VISION CARE</strong><small>Premium Optical</small></div></div>
+      <p class="ft-about">AL Ibrahim Vision Care &amp; Jaitpur Eye Centre — two branches dedicated to expert eye care and premium eyewear for the entire community.</p>
+      <div class="ft-badges"><span>2 Branches</span><span>500+ Frames</span><span>Expert Doctors</span></div>
+    </div>
+    <div class="ft-col"><h5>Services</h5><a href="#">Eye Examination</a><a href="#">Spectacle Frames</a><a href="#">Contact Lenses</a><a href="#">Sunglasses</a><a href="#">Frame Repairs</a></div>
+    <div class="ft-col"><h5>Branches</h5><a href="#">AL Ibrahim Vision Care</a><a href="#">Jaitpur Eye Centre</a><a href="#contact">Book Appointment</a><a href="#branches">Find Us</a></div>
+    <div class="ft-col"><h5>Doctors</h5><a href="#">Dr. Raees Kalimullah</a><a href="#">Md. Alamgir</a><a href="#contact">Book Consultation</a></div>
+  </div>
+  <div class="ft-bottom">
+    <p>© 2025 <span class="hi">AL Ibrahim Vision Care</span> &amp; <span class="hi">Jaitpur Eye Centre</span>. All Rights Reserved.</p>
+    <p>Designed for Clear Vision</p>
+  </div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:0.09});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+window.addEventListener('scroll',()=>{document.querySelector('nav').style.boxShadow=window.scrollY>8?'0 4px 20px rgba(0,0,0,.09)':'none';});
+</script>
+</body>
+</html>
